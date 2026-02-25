@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="eng">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tasbeh</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #000000;
+        font-family: Arial, sans-serif;
+      }
+
+      .card {
+        background: rgb(158, 60, 60);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 50px;
+        margin: 20px 0;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .add {
+        background: green;
+        color: white;
+      }
+
+      .reset {
+        background: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Tasbeh</h2>
+      <h1 id="count">0</h1>
+      <button class="add" onclick="increment()">Bosish</button>
+      <button class="reset" onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+      let count = 0;
+
+      function increment() {
+        count++;
+        document.getElementById("count").textContent = count;
+      }
+
+      function reset() {
+        count = 0;
+        document.getElementById("count").textContent = count;
+      }
+    </script>
+  </body>
+</html>
